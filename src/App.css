@@ -1,0 +1,39 @@
+/* Leaflet Map Global Fixes */
+.leaflet-container {
+    height: 100% !important;
+    width: 100% !important;
+    outline: none;
+    z-index: 10;
+}
+
+/* Ensure tiles look good in both modes */
+.leaflet-tile-pane {
+    filter: brightness(1.05) contrast(0.95);
+}
+
+.dark .leaflet-tile-pane {
+    filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+/* Clean up Leaflet controls */
+.leaflet-control-zoom {
+    border: none !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.leaflet-bar a {
+    background-color: white !important;
+    color: #4B5563 !important;
+    border: none !important;
+    border-bottom: 1px solid #E5E7EB !important;
+}
+
+.leaflet-bar a:last-child {
+    border-bottom: none !important;
+}
+
+.dark .leaflet-bar a {
+    background-color: #1F2937 !important;
+    color: #D1D5DB !important;
+    border-color: #374151 !important;
+}
